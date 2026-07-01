@@ -1,0 +1,272 @@
+"style.css": `@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Lora:wght@400;500&display=swap');
+
+:root {
+    --bg-cream: #F4EBD0;
+    --bg-paper: #E6D5B8;
+    --text-dark: #3E2723;
+    --accent-gold: #8B5A2B;
+    --accent-hover: #633E1D;
+    --vinyl-black: #1A1A1A;
+    --border-color: #D4C3A3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- NAVIGATION --- */
+header {
+    background-color: var(--bg-paper);
+    border-bottom: 2px solid var(--accent-gold);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent-gold);
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+/* --- MAIN CONTENT --- */
+main {
+    padding: 50px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+    width: 100%;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.text-content {
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- VINYL PLAYER --- */
+.player-section {
+    background: linear-gradient(135deg, #d7c4a1, #c7b08b);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 50px;
+    border: 4px double var(--accent-gold);
+}
+
+.vinyl-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px auto;
+    position: relative;
+    background-color: var(--vinyl-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4), inset 0 0 15px rgba(255,255,255,0.15);
+}
+
+.vinyl-label {
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #333;
+    transition: 0.5s;
+}
+
+.vinyl-hole {
+    width: 10px;
+    height: 10px;
+    background-color: var(--bg-cream);
+    border-radius: 50%;
+}
+
+.vinyl-grooves {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+    pointer-events: none;
+}
+
+/* Animation Classes untuk Piring Hitam */
+.spin {
+    animation: spinRecord 2s linear infinite;
+}
+
+@keyframes spinRecord {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.now-playing-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.spotify-container {
+    width: 100%;
+    max-width: 600px;
+    height: 0; /* Kotak disembunyikan secara lalai */
+    overflow: hidden;
+    transition: height 0.3s ease;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.spotify-container.active {
+    height: 152px; /* Ketinggian Spotify player sebenar */
+}
+
+/* --- PLAYLIST GRID --- */
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.playlist-card {
+    background-color: var(--bg-paper);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 5px 5px 0px rgba(139, 90, 43, 0.15);
+}
+
+.playlist-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.playlist-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.play-btn {
+    background-color: var(--text-dark);
+    color: var(--bg-cream);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    background-color: transparent;
+    color: var(--text-dark);
+    border: 2px solid var(--text-dark);
+}
+
+/* --- FORMS & BUTTONS --- */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-paper);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: 'Lora', serif;
+    background-color: var(--bg-cream);
+}
+
+.submit-btn {
+    background-color: var(--accent-gold);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--text-dark);
+    color: var(--bg-cream);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}`,
