@@ -1,0 +1,51 @@
+"contact.html": `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dust & Needles | Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">📻 Dust & Needles</a>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Drop Us A Line</h2>
+        
+        <div class="contact-form">
+            <!-- PENTING: data-netlify="true" adalah rahsia untuk Admin terima data -->
+            <form name="contact" method="POST" data-netlify="true">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Message / Record Request</label>
+                    <textarea name="message" rows="5" required placeholder="I would love a playlist for..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dust & Needles. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"><\/script>
+</body>
+</html>`,
