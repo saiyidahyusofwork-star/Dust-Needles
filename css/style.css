@@ -1,20 +1,22 @@
 /* =========================================
-   DUST & NEEDLES | VINTAGE THEME CSS
+DUST & NEEDLES | VINTAGE THEME CSS
 ========================================= */
 
 :root {
-    /* Vintage Color Palette */
-    --bg-cream: #F4EBD0; 
-    --bg-paper: #E6D5B8; 
-    --text-dark: #3E2723; 
-    --accent-gold: #8B5A2B; 
-    --accent-hover: #633E1D;
-    --vinyl-black: #1A1A1A;
-    --border-color: #D4C3A3;
-    
-    /* Typography */
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Lora', serif;
+/* Vintage Color Palette */
+--bg-cream: #F4EBD0;
+--bg-paper: #E6D5B8;
+--text-dark: #3E2723;
+--accent-gold: #8B5A2B;
+--accent-hover: #633E1D;
+--vinyl-black: #1A1A1A;
+--border-color: #D4C3A3;
+
+/* Typography */
+--font-heading: 'Playfair Display', serif;
+--font-body: 'Lora', serif;
+
+
 }
 
 /* --- CUSTOM SCROLLBAR --- */
@@ -23,213 +25,152 @@
 ::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 10px; border: 3px solid var(--bg-cream); }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-dark); }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font-body);
-    background-color: var(--bg-cream);
-    color: var(--text-dark);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+font-family: var(--font-body);
+background-color: var(--bg-cream);
+color: var(--text-dark);
+line-height: 1.6;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+overflow-x: hidden;
 }
 
 /* --- NAVIGATION BAR (MENU DI TENGAH) --- */
 header {
-    background-color: var(--bg-paper);
-    border-bottom: 2px solid var(--accent-gold);
-    padding: 20px 5%;
-    display: flex;
-    align-items: center;
-    position: relative; /* Ini penting untuk menu ke tengah */
-    justify-content: center;
+background-color: var(--bg-paper);
+border-bottom: 2px solid var(--accent-gold);
+padding: 20px 5%;
+display: flex;
+align-items: center;
+position: relative;
+justify-content: center;
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 26px;
-    font-weight: bold;
-    color: var(--text-dark);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    position: absolute; /* Tolak logo ke kiri */
-    left: 5%;
+font-family: var(--font-heading);
+font-size: 26px;
+font-weight: bold;
+color: var(--text-dark);
+text-decoration: none;
+display: flex;
+align-items: center;
+position: absolute;
+left: 5%;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px; /* Jarak antara menu */
+list-style: none;
+display: flex;
+gap: 30px;
 }
 
 nav a {
-    color: var(--text-dark);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s, border-bottom 0.3s;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
+color: var(--text-dark);
+text-decoration: none;
+font-weight: 500;
+font-size: 15px;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: color 0.3s, border-bottom 0.3s;
+padding-bottom: 5px;
+border-bottom: 2px solid transparent;
 }
 
 nav a:hover, nav a.active {
-    color: var(--accent-gold);
-    border-bottom: 2px solid var(--accent-gold);
+color: var(--accent-gold);
+border-bottom: 2px solid var(--accent-gold);
 }
 
 .mobile-menu-btn {
-    display: none;
-}
-
-/* --- HERO SECTION (MUKA DEPAN) --- */
-/* DI SINI LETAKNYA GAMBAR BACKGROUND */
-.hero-section {
-    /* Saya masukkan link gambar Piring Hitam (Vinyl) dari Unsplash */
-    background-image: url('https://images.unsplash.com/photo-1614613535308-eb51bd3d2c17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-bottom: 5px solid var(--accent-gold);
-}
-
-/* Kotak Gelap Atas Gambar Supaya Tulisan Jelas */
-.hero-overlay {
-    background-color: rgba(62, 39, 35, 0.85); /* Coklat Gelap Transparent */
-    padding: 50px;
-    border-radius: 15px;
-    color: var(--bg-cream);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-    max-width: 700px;
-    margin: 20px;
-}
-
-.hero-overlay h1 {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    margin-bottom: 15px;
-    color: #fff;
+display: none;
 }
 
 /* --- MAIN CONTENT AREA --- */
 main {
-    flex: 1;
-    width: 100%;
+flex: 1;
+width: 100%;
 }
 
 .content-wrapper {
-    padding: 50px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
+padding: 50px 5%;
+max-width: 1200px;
+margin: 0 auto;
 }
 
 .section-title {
-    font-family: var(--font-heading);
-    font-size: 36px;
-    text-align: center;
-    margin: 40px 0 30px 0;
-    color: var(--text-dark);
+font-family: var(--font-heading);
+font-size: 36px;
+text-align: center;
+margin: 40px 0 30px 0;
+color: var(--text-dark);
 }
 
 .text-content {
-    font-size: 18px;
-    text-align: center;
-    line-height: 1.8;
+font-size: 18px;
+text-align: center;
+line-height: 1.8;
 }
 
-/* --- VINYL PLAYER SECTION --- */
+/* --- VINYL PLAYER SECTION (UNTUK PLAYLIST) --- */
 .player-section {
-    background: linear-gradient(135deg, #d7c4a1, #c7b08b);
-    padding: 40px 20px;
-    text-align: center;
-    border-top: 4px double var(--accent-gold);
-    border-bottom: 4px double var(--accent-gold);
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+background: linear-gradient(135deg, #d7c4a1, #c7b08b);
+padding: 40px 20px;
+text-align: center;
+border-top: 4px double var(--accent-gold);
+border-bottom: 4px double var(--accent-gold);
+margin-bottom: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .vinyl-container {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 20px auto;
-    position: relative;
-    background-color: #1A1A1A; /* WARNA HITAM PEKAT */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4), inset 0 0 15px rgba(255,255,255,0.15);
+width: 180px;
+height: 180px;
+margin: 0 auto 20px auto;
+position: relative;
+background-color: #1A1A1A;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 10px 25px rgba(0,0,0,0.4), inset 0 0 15px rgba(255,255,255,0.15);
 }
 
 .vinyl-label {
-    width: 60px;
-    height: 60px;
-    background-color: var(--accent-gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #333;
-    transition: background-color 0.5s;
-    background-size: cover;
-    background-position: center;
+width: 60px;
+height: 60px;
+background-color: var(--accent-gold);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 2px solid #333;
+transition: background-color 0.5s;
 }
 
-.vinyl-hole {
-    width: 10px;
-    height: 10px;
-    background-color: var(--bg-cream);
-    border-radius: 50%;
-}
-
-.vinyl-grooves {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-.vinyl-grooves::before, .vinyl-grooves::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.05);
-}
+.vinyl-hole { width: 10px; height: 10px; background-color: var(--bg-cream); border-radius: 50%; }
+.vinyl-grooves { position: absolute; width: 160px; height: 160px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); }
+.vinyl-grooves::before, .vinyl-grooves::after { content: ''; position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,0.05); }
 .vinyl-grooves::before { top: 10px; left: 10px; right: 10px; bottom: 10px; }
 .vinyl-grooves::after { top: 25px; left: 25px; right: 25px; bottom: 25px; }
-
 .spin { animation: spinRecord 2s linear infinite; }
-@keyframes spinRecord { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
 .now-playing-title { font-family: var(--font-heading); font-size: 22px; margin-bottom: 15px; font-style: italic; }
-
-.spotify-container {
-    width: 100%; max-width: 600px; height: 0; transition: height 0.3s ease; overflow: hidden; border-radius: 12px;
-}
+.spotify-container { width: 100%; max-width: 600px; height: 0; transition: height 0.3s ease; overflow: hidden; border-radius: 12px; }
 .spotify-container.active { height: 152px; }
 
 /* --- PLAYLIST GRID --- */
-.playlist-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;
-}
-.playlist-card {
-    background-color: var(--bg-paper); border: 1px solid var(--border-color); border-radius: 12px; padding: 25px; text-align: center;
-    box-shadow: 5px 5px 0px rgba(139, 90, 43, 0.15); transition: transform 0.2s, box-shadow 0.2s;
-}
+.playlist-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+.playlist-card { background-color: var(--bg-paper); border: 1px solid var(--border-color); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 5px 5px 0px rgba(139, 90, 43, 0.15); transition: transform 0.2s, box-shadow 0.2s; }
 .playlist-card:hover { transform: translateY(-5px); box-shadow: 8px 8px 0px rgba(139, 90, 43, 0.3); }
 .playlist-icon { font-size: 40px; margin-bottom: 15px; }
 .playlist-card h3 { font-family: var(--font-heading); font-size: 24px; margin-bottom: 10px; }
@@ -237,21 +178,16 @@ main {
 .play-btn { background-color: var(--text-dark); color: var(--bg-cream); border: 2px solid var(--text-dark); padding: 12px 20px; border-radius: 30px; cursor: pointer; transition: all 0.3s; width: 100%; font-weight: bold; }
 .play-btn:hover { background-color: transparent; color: var(--text-dark); }
 
-/* --- FORMS --- */
+/* --- FORMS & BUTTONS --- */
 .contact-form { max-width: 600px; margin: 0 auto; background: var(--bg-paper); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); }
 .form-group { margin-bottom: 20px; text-align: left; }
 .form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
 .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border-color); background-color: var(--bg-cream); border-radius: 6px; font-family: var(--font-body); font-size: 16px; }
-
 .submit-btn { background-color: var(--accent-gold); color: white; border: none; padding: 15px 30px; font-size: 18px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: background 0.3s; text-decoration: none; display: inline-block; }
 .submit-btn:hover { background-color: var(--accent-hover); }
 
 /* --- FOOTER PREMIUM (Dikecilkan) --- */
-.premium-footer {
-    background-color: var(--text-dark); color: var(--bg-cream);
-    padding: 30px 5% 15px 5%; /* Saiz atas bawah dikecilkan */
-    margin-top: auto; border-top: 4px solid var(--accent-gold);
-}
+.premium-footer { background-color: var(--text-dark); color: var(--bg-cream); padding: 30px 5% 15px 5%; margin-top: auto; border-top: 4px solid var(--accent-gold); }
 .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; text-align: left; }
 .footer-container h3 { font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 15px; font-size: 1.2rem; }
 .footer-links ul { list-style: none; padding: 0; }
@@ -260,12 +196,132 @@ main {
 .footer-links a:hover { color: var(--accent-gold); opacity: 1; padding-left: 5px; }
 .footer-bottom { text-align: center; padding-top: 15px; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; opacity: 0.7; }
 
+/* =========================================
+REKAAN BARU UNTUK MUKA DEPAN (HOME SPLIT)
+========================================= */
+.home-container {
+flex: 1;
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 60px 5%;
+display: flex;
+align-items: center;
+}
+
+.hero-split {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 50px;
+align-items: center;
+width: 100%;
+}
+
+.hero-text-part h1 {
+font-family: var(--font-heading);
+font-size: 3.5rem;
+color: var(--text-dark);
+margin-bottom: 20px;
+line-height: 1.2;
+}
+
+.hero-text-part h1 .highlight { color: var(--accent-gold); font-style: italic; }
+
+.hero-text-part p {
+font-size: 18px;
+color: var(--text-dark);
+margin-bottom: 30px;
+line-height: 1.8;
+opacity: 0.9;
+}
+
+/* GAMBAR COLLAGE BERTINDIH */
+.hero-visual-collage {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+}
+
+.collage-wrapper {
+position: relative;
+width: 100%;
+max-width: 440px;
+height: 440px;
+animation: softFloat 7s ease-in-out infinite;
+}
+
+.sleeve-jacket {
+position: absolute;
+width: 280px;
+height: 280px;
+background: #111;
+border-radius: 8px;
+box-shadow: 0 20px 40px rgba(62, 39, 35, 0.4);
+border: 1px solid rgba(0,0,0,0.1);
+z-index: 2;
+overflow: hidden;
+transform: rotate(-4deg) translate(-25px, -25px);
+transition: transform 0.5s;
+}
+
+.sleeve-jacket img { width: 100%; height: 100%; object-fit: cover; filter: sepia(20%) contrast(105%); }
+
+.vinyl-disc-spin {
+position: absolute;
+width: 265px;
+height: 265px;
+background: repeating-radial-gradient(circle, #181818, #111111 2px, #222222 4px, #111111 5px);
+border-radius: 50%;
+box-shadow: 0 10px 30px rgba(62, 39, 35, 0.5);
+z-index: 1;
+transform: translate(65px, -15px);
+display: flex;
+justify-content: center;
+align-items: center;
+animation: spinRecord 18s linear infinite;
+}
+
+.vinyl-center-gold { width: 90px; height: 90px; border-radius: 50%; background: var(--accent-gold); border: 4px solid #111; display: flex; justify-content: center; align-items: center; }
+.vinyl-center-hole { width: 12px; height: 12px; background: #000; border-radius: 50%; }
+
+.polaroid-photo {
+position: absolute;
+bottom: 15px;
+right: 0px;
+width: 180px;
+background: #FAF8F5;
+padding: 10px 10px 25px;
+box-shadow: 10px 15px 35px rgba(62, 39, 35, 0.3);
+transform: rotate(8deg);
+z-index: 3;
+border-radius: 2px;
+transition: transform 0.5s;
+}
+
+.polaroid-photo img { width: 100%; height: 140px; object-fit: cover; filter: sepia(15%) contrast(98%); border: 1px solid rgba(0,0,0,0.05); }
+
+.polaroid-caption { font-family: var(--font-heading); color: #2b2824; text-align: center; font-size: 0.9rem; margin-top: 10px; font-style: italic; font-weight: 600; }
+
+.tape-strip { position: absolute; top: -12px; left: 35%; width: 60px; height: 22px; background: rgba(222, 215, 195, 0.6); transform: rotate(-6deg); border-left: 1px dashed rgba(0,0,0,0.1); border-right: 1px dashed rgba(0,0,0,0.1); }
+
+.collage-wrapper:hover .sleeve-jacket { transform: rotate(-1deg) translate(-35px, -30px); }
+.collage-wrapper:hover .polaroid-photo { transform: rotate(3deg) scale(1.04); }
+
+@keyframes softFloat { 0% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-12px) rotate(1deg); } 100% { transform: translateY(0px) rotate(0deg); } }
+@keyframes spinRecord { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
 /* Responsive untuk fon bimbit */
 @media (max-width: 768px) {
-    header { justify-content: space-between; }
-    .logo { position: static; }
-    .mobile-menu-btn { display: block; background: none; border: none; font-size: 24px; color: var(--text-dark); cursor: pointer; }
-    nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-paper); padding: 20px; z-index: 10; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-    nav ul.show { display: flex; }
+header { justify-content: space-between; }
+.logo { position: static; }
+.mobile-menu-btn { display: block; background: none; border: none; font-size: 24px; color: var(--text-dark); cursor: pointer; }
+nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-paper); padding: 20px; z-index: 10; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+nav ul.show { display: flex; }
+
+/* Layout Home Untuk Fon Bimbit */
+.hero-split { grid-template-columns: 1fr; text-align: center; }
+.collage-wrapper { margin-top: 30px; transform: scale(0.85); margin-left: -20px; }
+
+
 }
-```eof
