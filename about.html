@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dust & Needles | About Us</title>
+    <title>About Us | Dust & Needles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">📻 Dust & Needles</a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
         <nav>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -19,19 +21,42 @@
         </nav>
     </header>
 
-    <main>
+    <main style="padding: 50px 5%; max-width: 900px; margin: 0 auto; flex: 1;">
         <h2 class="section-title">The Dust & Needles Story</h2>
         <div class="text-content">
-            <p>Dust & Needles was born out of a profound love for analog sound in a digital world. We wanted to recreate the feeling of digging through crates of old records, finding a hidden gem, and letting the needle drop.</p>
+            <p><strong>Dust & Needles Archive</strong></p><br>
+            <p>We are a group of music enthusiasts dedicated to curating the best vintage vibes. Dust & Needles was born out of a profound love for analog sound in a digital world. We wanted to recreate the feeling of digging through crates of old records, finding a hidden gem, and letting the needle drop.</p>
             <br>
-            <p>Our team aims to provide a seamless, distraction-free environment where listeners can easily discover mood-based vintage playlists.</p>
+            <p>Built with passion. Our team aims to provide a seamless, distraction-free environment to discover mood-based playlists.</p>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Dust & Needles. All Rights Reserved.</p>
+    <footer class="premium-footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>📻 Dust & Needles</h3>
+                <p>Curating the best analog sounds for your daily moods. A space where vintage aesthetics meet modern curation.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="playlists.html">Playlists</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <p>Enjoy our curated playlists directly on Spotify.</p>
+                <p style="margin-top: 10px; color: var(--accent-gold);">Email: hello@dustneedles.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dust & Needles. All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <script src="js/script.js"><\/script>
+    <script src="js/script.js"></script>
 </body>
-</html>`,
+</html>
