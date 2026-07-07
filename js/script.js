@@ -27,11 +27,15 @@ function playSpotify(playlistId, title, labelColor) {
     statusText.innerText = `Playing: ${title}`;
   }
 
-  // Menukar warna bahagian tengah piring hitam (vinyl label)
+ // Menukar gambar bahagian tengah piring hitam (vinyl label)
   if (vinylLabel && labelColor) {
-    vinylLabel.style.backgroundColor = labelColor;
+    // Kalau fail imej anda dalam folder assets, contoh: assets/lofi.jpg
+    // Anda boleh hantar nama fail gambar terus ke dalam fungsi playSpotify
+    vinylLabel.style.backgroundImage = `url('${labelColor}')`;
+    vinylLabel.style.backgroundSize = 'cover';
+    vinylLabel.style.backgroundPosition = 'center';
   }
-
+    
  // Menghidupkan semula animasi pusingan untuk kesemua piring hitam
   vinyls.forEach(v => {
     v.classList.remove('spin');
