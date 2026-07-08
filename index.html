@@ -4,14 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dust & Needles | Vintage Playlist Archive</title>
-    <!-- Font Asal -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Link ke fail CSS Tema Coklat/Krim anda -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/69/08/a2/6908a25f447390a29ad8c25f365cd7de.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+        }
+
+        /* Memastikan kontena utama lutsinar supaya tidak menutup gambar wallpaper belakang */
+        .home-container {
+            background: transparent !important;
+        }
+
+        /* Menukar warna tajuk utama (H1) menjadi warna putih */
+        .hero-text-part h1 {
+            color: #ffffff !important;
+        }
+
+        /* Menukar warna teks penerangan (P) menjadi warna putih lembut/cerah */
+        .hero-text-part p {
+            color: #f1f1f1 !important;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header & Menu Tengah -->
     <header>
         <a href="index.html" class="logo">📻 Dust & Needles</a>
         <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
@@ -25,33 +47,27 @@
         </nav>
     </header>
 
-    <!-- Muka Depan Baru (Teks Kiri, Gambar Kanan) -->
     <main class="home-container">
         <section class="hero-split">
             
-            <!-- Bahagian Kiri: Teks -->
             <div class="hero-text-part">
                 <h1>Where analog memories come <span class="highlight">alive</span>.</h1>
                 <p>Your ultimate destination for curated, mood-based vintage playlists. We believe that every moment in life deserves the perfect analog soundtrack. Listen to the dust settle.</p>
                 <a href="playlists.html" class="submit-btn">Explore The Archive</a>
             </div>
             
-            <!-- Bahagian Kanan: Gambar Bertindih (Collage) -->
             <div class="hero-visual-collage">
                 <div class="collage-wrapper">
-                    <!-- Piring Hitam (Belakang) -->
                     <div class="vinyl-disc-spin">
                         <div class="vinyl-center-gold">
                             <div class="vinyl-center-hole"></div>
                         </div>
                     </div>
 
-                    <!-- Cover Album (Tengah) -->
                     <div class="sleeve-jacket">
                         <img src="https://images.unsplash.com/photo-1542208998-f6dbbb27a72f?q=80&w=800&auto=format&fit=crop" alt="Analog Vintage Record Jacket Cover">
                     </div>
 
-                    <!-- Gambar Polaroid (Depan) -->
                     <div class="polaroid-photo">
                         <div class="tape-strip"></div>
                         <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=400&auto=format&fit=crop" alt="Aesthetic Jazz Piano Bar">
@@ -63,7 +79,6 @@
         </section>
     </main>
 
-    <!-- Footer yang Seragam dengan Page Lain -->
     <footer class="premium-footer">
         <div class="footer-container">
             <div class="footer-about">
