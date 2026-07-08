@@ -6,14 +6,20 @@
     <title>About Us | Dust & Needles</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Kod hiasan wallpaper diletakkan di sini supaya ia HANYA kesan pada halaman About Us sahaja -->
     <style>
         body {
-            /* Menggunakan link gambar pilihan baru anda */
-            background-image: url('https://i.pinimg.com/736x/0c/e2/f4/0ce2f4c811ae0712e2dce94571bc6ae1.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
+            background-image: url('https://i.pinimg.com/736x/0c/e2/f4/0ce2f4c811ae0712e2dce94571bc6ae1.jpg') !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: cover !important;
+            background-attachment: fixed !important;
+        }
+        
+        /* Memastikan kotak pembungkus menjadi lutsinar supaya gambar latar belakang tidak terlindung */
+        .split-card-wrapper {
+            background: transparent !important;
         }
     </style>
 </head>
